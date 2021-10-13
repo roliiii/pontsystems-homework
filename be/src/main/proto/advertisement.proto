@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package hu.fluffy.be.grpcserver;
+option java_multiple_files = true;
+
+
+message AdvertiesementsResponse {
+    repeated Advertisement advertisement = 1;
+}
+
+message Advertisement {
+    string name = 1;
+    string content = 2;
+}
+
+service AdvertisementService {
+    rpc getAllAdvertisement(google.protobuf.Empty) returns (AdvertiesementsResponse);
+}
