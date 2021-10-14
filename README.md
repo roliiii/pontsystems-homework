@@ -1,5 +1,7 @@
 # pontsystems-homework
 
+![](diagram.jpg)
+
 # Kafka/cassandra indítása local-ban
 cd env  
 docker-compose up
