@@ -7,7 +7,7 @@ data:
     grpc.client.adservice.address=static://be-service:9090
     grpc.client.adservice.negotiationType=PLAINTEXT
 
-    kafka.servers=local-services:29092,local-services:39092
+    kafka.servers=kaffka-kafka.env.svc.cluster.local:9092
 
 ---
 

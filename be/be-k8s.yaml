@@ -5,12 +5,13 @@ metadata:
 data:
   application.properties: |
     spring.data.cassandra.keyspace-name=advertisement
-    spring.data.cassandra.contact-points=local-services
+    spring.data.cassandra.contact-points=cassandra.env
     spring.data.cassandra.local-datacenter=datacenter1
     spring.data.cassandra.password=cassandra
     spring.data.cassandra.username=cassandra
     spring.data.cassandra.port=9042
-    kafka.servers=local-services:29092,local-services:39092
+    spring.data.cassandra.schema-action=CREATE_IF_NOT_EXISTS
+    kafka.servers=kaffka-kafka.env.svc.cluster.local:9092
 
 ---
 
