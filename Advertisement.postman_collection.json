@@ -8,9 +8,32 @@
 		{
 			"name": "add",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Asd\",\n    \"content\":\"asdfg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.111.226.179:8080/api/advertisement",
+					"protocol": "http",
+					"host": [
+						"10",
+						"111",
+						"226",
+						"179"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"advertisement"
+					]
+				}
 			},
 			"response": []
 		},
@@ -19,7 +42,21 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://10.111.226.179:8080/api/advertisement",
+					"protocol": "http",
+					"host": [
+						"10",
+						"111",
+						"226",
+						"179"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"advertisement"
+					]
+				}
 			},
 			"response": []
 		}
