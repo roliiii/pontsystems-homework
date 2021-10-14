@@ -15,7 +15,7 @@ helm install kaffka --namespace env bitnami/kafka
 
 
 # Kafka/cassandra indítása local-ban  
-cd env/local
+cd env/local  
 docker-compose up
 
 # Cassandra hasznos parancsok  
