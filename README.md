@@ -14,11 +14,11 @@ helm install kaffka --namespace env bitnami/kafka
 
 
 
-# Kafka/cassandra indítása local-ban  
+# Kafka/cassandra local  
 cd env/local  
 docker-compose up
 
-# Cassandra hasznos parancsok  
+# Cassandra useful commands  
 docker-compose exec cassandra bash  
 cqlsh -u cassandra -p cassandra  
 
