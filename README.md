@@ -5,12 +5,12 @@
 
 # helm  
 
-kubectl create namespace env
+kubectl create namespace nrfh
   
 helm repo add bitnami https://charts.bitnami.com/bitnami  
-helm install cassandra --namespace env --set dbUser.password=cassandra,cluster.datacenter=datacenter1 bitnami/cassandra
+helm install cassandra --namespace nrfh --set dbUser.password=cassandra,cluster.datacenter=datacenter1 bitnami/cassandra
 
-helm install kaffka --namespace env bitnami/kafka
+helm install kaffka --namespace nrfh bitnami/kafka
 
 
 
@@ -28,3 +28,12 @@ create keyspace advertisement WITH replication = {'class':'SimpleStrategy', 'rep
 describe advertisement  
 
 select * from advertisement.advertisemententity;
+
+# kubectl for company's rancher 
+
+copy config from rancher to
+nano ~/.kube/config
+
+than use kubectl as before
+
+kubectl apply -f [filename] --namespace nrfh
