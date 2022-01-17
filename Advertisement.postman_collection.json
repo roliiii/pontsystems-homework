@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"Asd\",\n    \"content\":\"asdfg\"\n}",
+					"raw": "{\n    \"name\":\"Béla\",\n    \"content\":\"Eladó minden is, kivéve ami nem!\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,15 +20,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://10.111.226.179:8080/api/advertisement",
+					"raw": "http://nrhf.k8s.dev.pnt.hu/api/advertisement",
 					"protocol": "http",
 					"host": [
-						"10",
-						"111",
-						"226",
-						"179"
+						"nrhf",
+						"k8s",
+						"dev",
+						"pnt",
+						"hu"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"advertisement"
@@ -43,15 +43,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://10.111.226.179:8080/api/advertisement",
+					"raw": "http://nrhf.k8s.dev.pnt.hu/api/advertisement",
 					"protocol": "http",
 					"host": [
-						"10",
-						"111",
-						"226",
-						"179"
+						"nrhf",
+						"k8s",
+						"dev",
+						"pnt",
+						"hu"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"advertisement"
