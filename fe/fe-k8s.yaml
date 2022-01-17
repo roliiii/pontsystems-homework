@@ -7,7 +7,7 @@ data:
     grpc.client.adservice.address=static://be-service:9090
     grpc.client.adservice.negotiationType=PLAINTEXT
 
-    kafka.servers=kaffka-kafka.env.svc.cluster.local:9092
+    kafka.servers=kaffka-kafka.nrhf.svc.cluster.local:9092
 
 ---
 
@@ -32,7 +32,7 @@ spec:
             memory: "256Mi"
             cpu: "500m"
         ports:
-        - containerPort: 9090
+        - containerPort: 8080
         volumeMounts:
         - name: fe-config-volume
           mountPath: /config
@@ -48,11 +48,30 @@ kind: Service
 metadata:
   name: fe-service
 spec:
-  type: LoadBalancer
   selector:
     app: fe-deployment
   ports:
-  - port: 8080
+  - port: 80
     targetPort: 8080
 
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nrhf-ingress
+  labels:
+    name: nrhf-ingress
+spec:
+  rules:
+  - host: nrhf.k8s.dev.pnt.hu
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/api"
+        backend:
+          service:
+            name: fe-service
+            port: 
+              number: 80
 

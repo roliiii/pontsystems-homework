@@ -5,13 +5,13 @@ metadata:
 data:
   application.properties: |
     spring.data.cassandra.keyspace-name=advertisement
-    spring.data.cassandra.contact-points=cassandra.env
+    spring.data.cassandra.contact-points=cassandra
     spring.data.cassandra.local-datacenter=datacenter1
     spring.data.cassandra.password=cassandra
     spring.data.cassandra.username=cassandra
     spring.data.cassandra.port=9042
     spring.data.cassandra.schema-action=CREATE_IF_NOT_EXISTS
-    kafka.servers=kaffka-kafka.env.svc.cluster.local:9092
+    kafka.servers=kaffka-kafka.nrhf.svc.cluster.local:9092
 
 ---
 
@@ -20,7 +20,7 @@ kind: Deployment
 metadata:
   name: be-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: be-deployment
@@ -53,7 +53,6 @@ kind: Service
 metadata:
   name: be-service
 spec:
-  type: LoadBalancer
   selector:
     app: be-deployment
   ports:
