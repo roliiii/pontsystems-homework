@@ -5,12 +5,12 @@
 
 # helm  
 
-kubectl create namespace nrfh
+kubectl create namespace nrhf
   
 helm repo add bitnami https://charts.bitnami.com/bitnami  
-helm install cassandra --namespace nrfh --set dbUser.password=cassandra,cluster.datacenter=datacenter1 bitnami/cassandra
+helm install cassandra --namespace nrhf --set dbUser.password=cassandra,cluster.datacenter=datacenter1 bitnami/cassandra
 
-helm install kaffka --namespace nrfh bitnami/kafka
+helm install kaffka --namespace nrhf bitnami/kafka
 
 
 
@@ -36,4 +36,4 @@ nano ~/.kube/config
 
 than use kubectl as before
 
-kubectl apply -f [filename] --namespace nrfh
+kubectl apply -f [filename] --namespace nrhf
