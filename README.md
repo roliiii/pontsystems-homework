@@ -36,4 +36,8 @@ nano ~/.kube/config
 
 than use kubectl as before
 
-kubectl apply -f [filename] --namespace nrhf
+kubectl apply -f [filename] --namespace nrfh
+
+helm install kafka --namespace nrhf --set persistence.enabled=false,zookeeper.enabled=false,externalZookeeper.servers=zookeeper bitnami/kafka
+
+helm install zookeeper --namespace nrhf --set persistence.enabled=false bitnami/zookeeper
